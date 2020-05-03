@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string",
+            "minLength": 1
+        },
+        "services": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Domainname": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "Name": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "Hostname": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "Image": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "tar": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "required": [
+                    "Domainname",
+                    "Hostname",
+                    "Image",
+                    "tar",
+                    "Name"
+                ]
+            },
+            "minItems": 1
+        }
+    },
+    "required": [
+        "version",
+        "services"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string",
+            "minLength": 0
+        },
+        "services": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Domainname": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "Name": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "Hostname": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "Image": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                },
+                "required": [
+                    "Domainname",
+                    "Image"
+                ]
+            },
+            "minItems": 1
+        }
+    },
+    "required": [
+        "version",
+        "services"
+    ]
+}

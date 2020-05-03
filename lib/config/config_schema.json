@@ -1,0 +1,109 @@
+{
+    "type": "object",
+    "properties": {
+        "packages": {
+            "type": "string",
+            "default": "packages",
+            "minLength": 1
+        },
+        "env": {
+            "type": "string",
+            "default": "env.json",
+            "minLength": 1
+        },
+        "mode": {
+            "type": "string",
+            "default": "socket",
+            "enum": ["socket", "tcp", "windows"]
+        },
+        "version": {
+            "type": "string",
+            "default": "v1.38",
+            "minLength": 1,
+            "pattern": "^v[0-9]{1}\\.[0-9]{1,2}$"
+        },
+        "socket": {
+            "type": "object",
+            "default": {},
+            "properties": {
+                "path": {
+                    "type": "string",
+                    "default": "/var/run/docker.sock",
+                    "minLength": 1
+                }
+            },
+            "required": [
+                "path"
+            ]
+        },
+        "tcp": {
+            "type": "object",
+            "default": {},
+            "properties": {
+                "protocol": {
+                    "type": "string",
+                    "default": "http",
+                    "enum": ["tcp", "http", "https"]
+                },
+                "host": {
+                    "type": "string",
+                    "default": "localhost",
+                    "minLength": 1
+                },
+                "port": {
+                    "type": "integer",
+                    "default": 2375,
+                    "minimum": 1,
+                    "maximum": 65554
+                },
+                "ca": {
+                    "type": "string",
+                    "default": "",
+                    "minLength": 0
+                },
+                "cert": {
+                    "type": "string",
+                    "default": "",
+                    "minLength": 0
+                },
+                "key": {
+                    "type": "string",
+                    "default": "",
+                    "minLength": 0
+                }
+            },
+            "required": [
+                "protocol",
+                "host",
+                "port",
+                "ca",
+                "cert",
+                "key"
+            ]
+        },
+        "windows": {
+            "type": "object",
+            "default": {},
+            "properties": {
+                "port": {
+                    "type": "integer",
+                    "default": 2375,
+                    "minimum": 1,
+                    "maximum": 65554
+                }
+            },
+            "required": [
+                "port"
+            ]
+        }
+    },
+    "required": [
+        "env",
+        "packages",
+        "mode",
+        "version",
+        "socket",
+        "tcp",
+        "windows"
+    ]
+}

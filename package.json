@@ -1,0 +1,40 @@
+{
+  "name": "updater",
+  "version": "0.0.1",
+  "description": "Updater for docker services",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "encode": "secret-coder --encode --output secret.dbsc --target ./secret --secret ",
+    "decode": "secret-coder --decode --output ./secret --target secret.dbsc --secret "
+  },
+  "bin": {
+    "updater": "./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samurayii/updater.git"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "Nuzhnov A.A.",
+  "license": "ISC",
+  "bugs": {
+    "url": "hhttps://github.com/samurayii/updater/issues"
+  },
+  "homepage": "https://github.com/samurayii/updater.git#readme",
+  "dependencies": {
+    "ajv": "^6.11.0",
+    "chalk": "^3.0.0",
+    "config-compiler": "*",
+    "dockerode": "^3.2.0",
+    "jtomler": "*",
+    "optionator": "^0.8.3"
+  },
+  "devDependencies": {
+    "secret-coder": "*"
+  }
+}

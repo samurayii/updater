@@ -1,0 +1,20 @@
+{
+    "packages": "/packages",
+    "env": "/packages/env.json",
+    "mode": "socket",
+    "version": "v1.38",
+    "socket": {
+        "path": "/var/run/docker.sock"
+    },
+    "tcp": {
+        "protocol": "http",
+        "host": "localhost",
+        "port": 2375,
+        "ca": "",
+        "cert": "",
+        "key": ""
+    },
+    "windows": {
+        "port": 2375
+    }
+}
