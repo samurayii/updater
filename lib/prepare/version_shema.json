@@ -1,10 +1,6 @@
 {
     "type": "object",
     "properties": {
-        "version": {
-            "type": "string",
-            "minLength": 0
-        },
         "services": {
             "type": "array",
             "items": {
@@ -36,7 +32,6 @@
         }
     },
     "required": [
-        "version",
         "services"
     ]
 }
