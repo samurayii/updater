@@ -69,7 +69,7 @@ Updater использует папку для обновлений заданн
 }
 ```
 
-#### Пример version.json:
+#### Пример env.json:
 ```js
 {
     "service1_name": "service1",
