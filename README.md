@@ -16,8 +16,8 @@ Updater это программа написанная на nodejs версии 
 --version | | Вывести номер версии приложения
 --help | | Вызвать справку по ключам запуска
 --config | | Включить режим настройки
---prepare | | Включить режим настройки
---check | | Включить режим настройки
+--prepare | | Включить режим подготовки
+--check | | Включить режим проверки
 --unpack | | Включить режим распаковки
 --update | | Включить режим обновления
 --package | все режимы | имя версии
@@ -78,3 +78,11 @@ Updater использует папку для обновлений заданн
     "service2_target": "http://demo-service1:3000/"
 }
 ```
+
+
+### Примеры приминения.
+
+подготовка обновления: `updater --prepare --packages .\secret\packages --package v1`
+проверка обновления: `updater --check --packages .\secret\packages --package v1`
+распаковка обновления: `updater --unpack --packages .\secret\packages --package v1`
+запуск обновления: `updater --update --packages .\secret\packages --package v1`
