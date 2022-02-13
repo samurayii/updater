@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/samurayii/updater.git#readme",
   "dependencies": {
-    "ajv": "^6.11.0",
+    "ajv": "^6.12.3",
     "chalk": "^3.0.0",
     "config-compiler": "*",
     "dockerode": "^3.2.0",
